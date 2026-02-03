@@ -2,6 +2,7 @@
 
 <!--
 **kitakitsune0x/kitakitsune0x** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+![:name](https://count.getloli.com/@:kitakitsune)
 
 Here are some ideas to get you started:
 
