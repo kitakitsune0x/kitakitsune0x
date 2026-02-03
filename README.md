@@ -1,5 +1,5 @@
 ## Hi there 👋
-![:kitakitsune](https://count.getloli.com/@:kitakitsune)
+![kitakitsune](https://count.getloli.com/@kitakitsune)
 <!--
 **kitakitsune0x/kitakitsune0x** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 ![:name](https://count.getloli.com/@:kitakitsune)
