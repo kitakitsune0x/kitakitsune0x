@@ -15,4 +15,15 @@
 
 ## WakaTime
 <!--START_SECTION:waka-->
+
+```txt
+From: 03 July 2023 - To: 09 April 2026
+
+Total Time: 806 hrs 55 mins
+
+TypeScript         612 hrs 20 mins       >>>>>>>>>>>>>>>>>>-------   72.58 %
+Python             57 hrs 19 mins        >>-----------------------   06.79 %
+Other              36 hrs 46 mins        >------------------------   04.36 %
+```
+
 <!--END_SECTION:waka-->
