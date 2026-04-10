@@ -12,3 +12,7 @@
 </pre>
     <img src="https://count.getloli.com/@kitakitsune" alt="kitakitsune counter" />
 </div>
+
+## WakaTime
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
