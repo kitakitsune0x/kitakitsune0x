@@ -1,38 +1,3 @@
-<!-- <h1 align="center">kitakitsune</h1>
-
-<p align="center">
-  weird cute useful software
-</p>
-
-<p align="center">
-  backend • tooling • automation • terminals • anime • art
-</p>
-
-<table align="center">
-  <tr>
-    <td>
-      <img src="https://github.com/kitakitsune0x.png" width="120" alt="kitakitsune avatar" />
-    </td>
-    <td>
-      <strong>hello hello</strong>
-      <br />
-      i like building strange little tools and clean systems
-      <br />
-      currently into backend things, automation, and internet oddities
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://github.com/kitakitsune0x?tab=repositories">repos</a> •
-  <a href="https://github.com/kitakitsune0x?tab=stars">stars</a> •
-  <a href="https://github.com/kitakitsune0x">profile</a>
-</p>
-
-<p align="center">
-  <img src="https://count.getloli.com/@kitakitsune" alt="Visitor counter" />
-</p> -->
-
 <div align="center">
 
 <img src="https://readme-typing-svg.demolab.com?font=Inconsolata&weight=500&size=50&duration=4000&pause=300&color=FEF7A0&multiline=true&repeat=false&width=1300&height=140&lines=Hello+Hello;I%E2%80%99m+Kita+%E2%80%94+tech+analyst+with+a+thing+for+AI+%E2%9C%A9" width="70%" />
