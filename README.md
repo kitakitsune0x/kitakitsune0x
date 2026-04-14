@@ -17,13 +17,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 03 July 2023 - To: 12 April 2026
+From: 03 July 2023 - To: 13 April 2026
 
-Total Time: 808 hrs 7 mins
+Total Time: 808 hrs 42 mins
 
-TypeScript         612 hrs 32 mins       >>>>>>>>>>>>>>>>>>-------   72.26 %
-Python             57 hrs 19 mins        >>-----------------------   06.76 %
-Other              39 hrs 34 mins        >------------------------   04.67 %
+TypeScript         612 hrs 39 mins       >>>>>>>>>>>>>>>>>>-------   71.95 %
+Python             57 hrs 20 mins        >>-----------------------   06.73 %
+Other              42 hrs 51 mins        >------------------------   05.03 %
 ```
 
 <!--END_SECTION:waka-->
