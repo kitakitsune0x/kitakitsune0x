@@ -64,7 +64,7 @@ class GitHubClient:
         query: str,
         variables: dict[str, object],
     ) -> dict[str, object]:
-        return self.request(
+        response = self.request(
             "POST",
             "graphql",
             payload={
@@ -72,6 +72,31 @@ class GitHubClient:
                 "variables": variables,
             },
         )
+
+        errors = response.get("errors")
+        if isinstance(errors, list) and errors:
+            messages = []
+            for error in errors:
+                if isinstance(error, dict):
+                    message = error.get("message")
+                    if isinstance(message, str):
+                        messages.append(message)
+
+            detail = "; ".join(messages) if messages else json.dumps(errors)
+            raise RuntimeError(
+                "GitHub GraphQL query failed: "
+                f"{detail}. If this workflow is using the default GITHUB_TOKEN, "
+                "set a PROFILE_README_TOKEN secret with a user token and rerun it."
+            )
+
+        data = response.get("data")
+        if not isinstance(data, dict):
+            raise RuntimeError(
+                "GitHub GraphQL response did not include a data object. "
+                f"Received keys: {', '.join(sorted(response.keys())) or '<none>'}"
+            )
+
+        return data
 
     def total_commits(self) -> int:
         response = self.request(
@@ -81,7 +106,11 @@ class GitHubClient:
                 "q": f"author:{self.login}",
             },
         )
-        return int(response["total_count"])
+        total_count = response.get("total_count")
+        if total_count is None:
+            raise RuntimeError("GitHub commit search response did not include total_count.")
+
+        return int(total_count)
 
 
 def require_env(name: str) -> str:
@@ -103,8 +132,8 @@ def profile_repository_name(login: str) -> str:
 
 def fetch_stats(client: GitHubClient, repository_name: str) -> dict[str, int]:
     query = """
-query ($profileRepositoryName: String!) {
-  viewer {
+query ($login: String!, $profileRepositoryName: String!) {
+  user(login: $login) {
     repositoriesContributedTo(
       first: 1
       contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
@@ -147,30 +176,49 @@ query ($profileRepositoryName: String!) {
       }
     }
   }
+  repository(owner: $login, name: $profileRepositoryName) {
+    defaultBranchRef {
+      target {
+        ... on Commit {
+          history(first: 0) {
+            totalCount
+          }
+        }
+      }
+    }
+  }
 }
 """
 
     data = client.graphql(
         query,
-        variables={"profileRepositoryName": repository_name},
-    )["data"]["viewer"]
+        variables={
+            "login": client.login,
+            "profileRepositoryName": repository_name,
+        },
+    )
 
-    repositories = data["repositories"]["nodes"]
+    user = data.get("user")
+    if not isinstance(user, dict):
+        raise RuntimeError(f"GitHub user '{client.login}' could not be loaded from GraphQL.")
+
+    repositories = user["repositories"]["nodes"]
+    repository = data.get("repository")
     profile_repo_history = (
-        data["repository"]["defaultBranchRef"]["target"]["history"]["totalCount"]
-        if data["repository"] and data["repository"]["defaultBranchRef"]
+        repository["defaultBranchRef"]["target"]["history"]["totalCount"]
+        if repository and repository["defaultBranchRef"]
         else 0
     )
 
     return {
         "total_stars": sum(repo["stargazers"]["totalCount"] for repo in repositories),
         "total_commits": max(client.total_commits() - profile_repo_history, 0),
-        "total_pull_requests": data["pullRequests"]["totalCount"]
+        "total_pull_requests": user["pullRequests"]["totalCount"]
         + sum(repo["pullRequests"]["totalCount"] for repo in repositories),
-        "total_issues": data["issues"]["totalCount"]
+        "total_issues": user["issues"]["totalCount"]
         + sum(repo["issues"]["totalCount"] for repo in repositories),
-        "contributed_to": data["repositoriesContributedTo"]["totalCount"]
-        + data["repositories"]["totalCount"],
+        "contributed_to": user["repositoriesContributedTo"]["totalCount"]
+        + user["repositories"]["totalCount"],
     }
 
 

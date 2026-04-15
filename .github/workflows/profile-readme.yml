@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  issues: read
+  pull-requests: read
 
 jobs:
   update-readme:
@@ -24,7 +26,7 @@ jobs:
       - name: Update GitHub stats section
         env:
           GITHUB_LOGIN: ${{ github.repository_owner }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PROFILE_README_TOKEN || github.token }}
         run: python scripts/update_profile_readme.py
 
       - name: Commit README changes
