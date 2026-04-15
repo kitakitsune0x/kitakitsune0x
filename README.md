@@ -16,6 +16,10 @@
 ## GitHub Stats
 <!--START_SECTION:github-stats-->
 ```text
-Stats refresh automatically with GitHub Actions.
+⭐  Total Stars:                          22
+➕  Total Commits:                       386
+🔀  Total PRs:                            52
+🚩  Total Issues:                          0
+📦  Contributed to:                       31
 ```
 <!--END_SECTION:github-stats-->
