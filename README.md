@@ -13,17 +13,9 @@
     <img src="https://count.getloli.com/@kitakitsune" alt="kitakitsune counter" />
 </div>
 
-## WakaTime
-<!--START_SECTION:waka-->
-
-```txt
-From: 03 July 2023 - To: 14 April 2026
-
-Total Time: 809 hrs 10 mins
-
-TypeScript         612 hrs 54 mins       >>>>>>>>>>>>>>>>>>-------   71.82 %
-Python             57 hrs 20 mins        >>-----------------------   06.72 %
-Other              44 hrs 13 mins        >------------------------   05.18 %
+## GitHub Stats
+<!--START_SECTION:github-stats-->
+```text
+Stats refresh automatically with GitHub Actions.
 ```
-
-<!--END_SECTION:waka-->
+<!--END_SECTION:github-stats-->
