@@ -17,7 +17,7 @@
 <!--START_SECTION:github-stats-->
 ```text
 ⭐  Total Stars:                          60
-➕  Total Commits:                       400
+➕  Total Commits:                       399
 🔀  Total PRs:                            57
 🚩  Total Issues:                          0
 📦  Contributed to:                       34
