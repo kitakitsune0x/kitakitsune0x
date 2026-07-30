@@ -1,5 +1,3 @@
-### GitHub Stats
-
 [![Kita's GitHub stats](https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark)](https://github.com/stats-organization/github-stats-extended)
 
 <div align="center">
