@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/stats-organization/github-stats-extended">
-    <img src="https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark" alt="Kita's GitHub stats" />
+    <img src="https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark&hide_rank=true" alt="Kita's GitHub stats" />
   </a>
 </p>
 
