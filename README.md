@@ -14,12 +14,5 @@
 </div>
 
 ## GitHub Stats
-<!--START_SECTION:github-stats-->
-```text
-⭐  Total Stars:                          42
-➕  Total Commits:                       274
-🔀  Total PRs:                            58
-🚩  Total Issues:                          1
-📦  Contributed to:                       37
-```
-<!--END_SECTION:github-stats-->
+
+[![Kita's GitHub stats](https://github-stats-extended.vercel.app/api?username=kitakitsune0x)](https://github.com/stats-organization/github-stats-extended)
