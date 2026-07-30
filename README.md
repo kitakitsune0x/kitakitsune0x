@@ -1,4 +1,8 @@
-[![Kita's GitHub stats](https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark)](https://github.com/stats-organization/github-stats-extended)
+<p align="center">
+  <a href="https://github.com/stats-organization/github-stats-extended">
+    <img src="https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark" alt="Kita's GitHub stats" />
+  </a>
+</p>
 
 <div align="center">
 
