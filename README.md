@@ -1,3 +1,6 @@
+### GitHub Stats
+
+[![Kita's GitHub stats](https://github-stats-extended.vercel.app/api?username=kitakitsune0x&theme=onedark)](https://github.com/stats-organization/github-stats-extended)
 
 <div align="center">
 
@@ -12,7 +15,3 @@
 </pre>
     <img src="https://count.getloli.com/@kitakitsune" alt="kitakitsune counter" />
 </div>
-
-## GitHub Stats
-
-[![Kita's GitHub stats](https://github-stats-extended.vercel.app/api?username=kitakitsune0x)](https://github.com/stats-organization/github-stats-extended)
